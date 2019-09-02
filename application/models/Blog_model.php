@@ -14,13 +14,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 		public function get_blog(){
 			$this->db->select('*');
-			$this->db->from('posts');
+			$this->db->from('blogs');
 			$query = $this->db->get();
 			return $query->result_array();
 		}
 
 		public function save_blog($title, $body){
-			$data = array('posttitle' => $title, 'postdescription' => $body);
-			return $this->db->insert('posts', $data);
+			$data = array('title' => $title, 'body' => $body);
+			return $this->db->insert('blogs', $data);
 		}
 	}

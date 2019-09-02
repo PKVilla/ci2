@@ -78,7 +78,7 @@ $db['default'] = array(
 	'hostname' => 'localhost',
 	'username' => 'root',
 	'password' => '',
-	'database' => 'myblog2',
+	'database' => 'ais_local',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
@@ -93,4 +93,70 @@ $db['default'] = array(
 	'stricton' => FALSE,
 	'failover' => array(),
 	'save_queries' => TRUE
+);
+
+$hostname = '(DESCRIPTION = (ADDRESS = (PROTOCOL = TCP)(HOST = db.oracle.amti.com.ph)(PORT = 1541))
+        (CONNECT_DATA = (SERVER = DEDICATED) (SERVICE_NAME = prod)))';
+
+$db['oracle_amti'] = array(
+	'dsn'	=> '',
+	'hostname' => $hostname,
+	'username' => 'amti',
+	'password' => 'amti',
+	'database' => 'oracle',
+	'dbdriver' => 'oci8',
+	'dbprefix' => '',
+	'oci_pconnect' => FALSE,
+	'db_debug' => FALSE,
+	'cache_on' => FALSE,
+	'cachedir' => '',
+	'char_set' => 'utf8',
+	'dbcollat' => 'utf8_general_ci',
+	'swap_pre' => '',
+	'autoinit' => TRUE,
+	'stricton' => FALSE
+);
+
+$hostname = '(DESCRIPTION = (ADDRESS = (PROTOCOL = TCP)(HOST = db.oracle.amti.com.ph)(PORT = 1541))
+        (CONNECT_DATA = (SERVER = DEDICATED) (SERVICE_NAME = prod)))';
+
+
+$db['oracle_apps'] = array(
+	'dsn'	=> '',
+	'hostname' => $hostname,
+	'username' => 'apps',
+	'password' => 'apps',
+	'database' => 'oracle apps',
+	'dbdriver' => 'oci8',
+	'dbprefix' => '',
+	'oci_pconnect' => FALSE,
+	'db_debug' => FALSE,
+	'cache_on' => FALSE,
+	'cachedir' => '',
+	'char_set' => 'utf8',
+	'dbcollat' => 'utf8_general_ci',
+	'swap_pre' => '',
+	'autoinit' => TRUE,
+	'stricton' => FALSE
+);
+$hostname = '(DESCRIPTION = (ADDRESS = (PROTOCOL = TCP)(HOST = db.oracle.amti.com.ph)(PORT = 1541))
+        (CONNECT_DATA = (SERVER = DEDICATED) (SERVICE_NAME = prod)))';
+
+$db['oracle_ar'] = array(
+	'dsn'	=> '',
+	'hostname' => $hostname,
+	'username' => 'ar',
+	'password' => 'ar',
+	'database' => 'oracle apps',
+	'dbdriver' => 'oci8',
+	'dbprefix' => '',
+	'oci_pconnect' => FALSE,
+	'db_debug' => FALSE,
+	'cache_on' => FALSE,
+	'cachedir' => '',
+	'char_set' => 'utf8',
+	'dbcollat' => 'utf8_general_ci',
+	'swap_pre' => '',
+	'autoinit' => TRUE,
+	'stricton' => FALSE
 );
