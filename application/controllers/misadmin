@@ -21,11 +21,4 @@
 # 0 5 * * 1 tar -zcf /var/backups/home.tgz /home/
 # 
 # For more information see the manual pages of crontab(5) and cron(8)
-# 
-# m h  dom mon dow   command
-* * * * * /usr/local/bin/node /var/www/html/server.js
-* 9 * * * echo "Restarng dealredgs" > /home/misadmin/test.txt
-* 9 * * * curl -s https://ais.amti.com.ph/deal_registration/check_reminder > /home/misadmin/logs/deal_reminder.log 2>&1
-* 9 * * * curl -s https://ais.amti.com.ph/deal_renewal/check_warranty > /home/misadmin/logs/deal_warranty.log 2>&1
-* 9 * * * curl -s https://ais.amti.com.ph/soa_notif/check_soa > /home/misadmin/logs/soa_logs.log 2>&1
-* 2 * * * curl -s https://ais.amti.com.ph/email_sample/send > /home/misadmin/logs/email_sample.log 2>&1
+
